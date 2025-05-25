@@ -105,11 +105,12 @@ DELETE /api/notes/:id — Delete a note
 ```
 ⚠️ All /api/notes routes require a valid Authorization: Bearer <token> header.
 
-📸 Screenshots
+## 📸 Screenshots
 
 
 📄 License
 This project is open source and free to use under the MIT License.
 
-🙌 Author
+## 🙌 Author
+
 Made with 💻 by Abhi378-2005 {Abhishek Paithankar}
