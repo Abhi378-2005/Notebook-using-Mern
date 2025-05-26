@@ -47,11 +47,12 @@ cd Backend
 npm install
 ```
 
-✏️ Create a .env file and add your monogodb Connection Details
+✏️ Create a .env file in root of backend if not present and add your monogodb Connection Details
 
 ```env
-MONGO_URI=mongodb://localhost:27017/notebook
-JWT_SECRET=your_jwt_secret_key
+MONGO_URI=mongodb://localhost:27017/Notebook
+JWT_SECRET=your_jwt_secret
+PORT=5000
 ```
 Start the backend
 ```bash
@@ -109,9 +110,29 @@ DELETE /api/notes/:id — Delete a note
 ## 📸 Screenshots
 
 
+### Home Page
+
+![Home Page](./Screenshots/Home%20Screen.png)
+
+
+### Login Page
+
+![Login](./Screenshots/Login.png)
+
+
+### Register Page
+
+![Register](./Screenshots/Register.png)
+
+
+### Notes Page
+
+![Notes](./Screenshots/Notes.png)
+
+
 📄 License
 This project is open source and free to use under the MIT License.
 
 ## 🙌 Author
 
-Made with 💻 by Abhi378-2005 {Abhishek Paithankar}
+Made with 💻 by Abhi378-2005 {Abhishek Paithankar} 😎

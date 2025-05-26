@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../utils/api";
+import "../Styles/register.css"; // Reuse login.css for styling
 
 const Register = () => {
   const navigate = useNavigate();
@@ -9,7 +10,6 @@ const Register = () => {
     email: "",
     password: ""
   });
-
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -26,42 +26,56 @@ const Register = () => {
     try {
       const res = await API.post("/auth/register", formData);
       localStorage.setItem("token", res.data.token);
-      navigate("/notes"); // Redirect to notes after successful registration
+      navigate("/notes");
     } catch (err) {
       setError(err.response?.data?.msg || "Registration failed");
     }
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto" }}>
-      <h2>Register</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
+    <div className="login-container">
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="title">
+          Register,
+          <br />
+          <span>create your account</span>
+        </div>
+
         <input
-          type="text"
-          placeholder="Name"
+          className="input"
           name="name"
+          placeholder="Name"
+          type="text"
+          required
           value={formData.name}
           onChange={handleChange}
-          required
-        /><br />
+        />
+
         <input
-          type="email"
-          placeholder="Email"
+          className="input"
           name="email"
+          placeholder="Email"
+          type="email"
+          required
           value={formData.email}
           onChange={handleChange}
-          required
-        /><br />
+        />
+
         <input
-          type="password"
-          placeholder="Password"
+          className="input"
           name="password"
+          placeholder="Password"
+          type="password"
+          required
           value={formData.password}
           onChange={handleChange}
-          required
-        /><br />
-        <button type="submit">Register</button>
+        />
+
+        {error && <div className="error">{error}</div>}
+
+        <button className="button-confirm" type="submit">
+          Sign up →
+        </button>
       </form>
     </div>
   );
