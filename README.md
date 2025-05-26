@@ -37,8 +37,8 @@ A full-stack **Note Taking Application** built with the **MERN stack** (MongoDB,
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/notebook-app-mern.git
-cd notebook-app-mern
+git clone https://github.com/Abhi378-2005/Notebook-using-Mern.git
+cd Notebook-using-Mern
 ```
 
 2. Backend Setup
@@ -47,7 +47,7 @@ cd Backend
 npm install
 ```
 
-✏️ Create a .env file
+✏️ Create a .env file and add your monogodb Connection Details
 
 ```env
 MONGO_URI=mongodb://localhost:27017/notebook
@@ -77,6 +77,7 @@ notebook-app-mern/
 │   ├── routes/
 │   ├── controllers/
 │   ├── middleware/
+│   ├── .env
 │   └── server.js
 ├── notebook-frontend/
 │   ├── src/
